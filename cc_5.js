@@ -16,3 +16,5 @@ while (hours <= 40) {
 }
 
 console.log(calculateBasePay());
+
+
