@@ -12,6 +12,7 @@ function calculateBasePay(hourlyRate, hoursWorked) {
     return (hourlyRate * hoursWorked);
     } else {
     console.log('Base pay cannot be calculated if worked over 40 hours.');
+    return 0
     }
 }
 
@@ -23,9 +24,22 @@ function calculateOvertimePay(hourlyRate, hoursWorked) {
     if (hoursWorked > 40) {
     return (hourlyRate * 1.5);
     } else {
-    console.log('Overtime pay cannot be calculated if worked under 40 hours.');
+    console.log('Overtime pay cannot be calculated if worked under 40 hours.')
+    return 0;
     }
 } 
 
 console.log(calculateOvertimePay(employees[0].hourlyRate, employees[0].hoursWorked));
 
+
+// Step 5
+grossPay = calculateBasePay(24.72, 42) + calculateOvertimePay(24.72, 42);
+netPay = grossPay * (1 - 0.15)
+function calculateTaxes(grossPay) {
+    return netPay.toFixed(2)
+}
+
+console.log(calculateTaxes(grossPay));
+
+
+// Step 6
