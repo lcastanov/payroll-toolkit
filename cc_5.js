@@ -33,13 +33,12 @@ console.log(calculateOvertimePay(employees[0].hourlyRate, employees[0].hoursWork
 
 
 // Step 5
-grossPay = calculateBasePay(24.72, 42) + calculateOvertimePay(24.72, 42);
+grossPay = calculateBasePay() + calculateOvertimePay();
 netPay = grossPay * (1 - 0.15)
 function calculateTaxes(grossPay) {
     return netPay.toFixed(2)
 }
 
 console.log(calculateTaxes(grossPay));
-
 
 // Step 6
